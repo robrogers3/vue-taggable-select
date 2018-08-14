@@ -125,6 +125,7 @@
              required: false,
              default: () => false
          },
+         //Make it taggable
          taggable: {
              type: Boolean,
              required: false,

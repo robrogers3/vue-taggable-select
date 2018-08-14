@@ -16,6 +16,7 @@ This **simple**
 
 ```html
 <vue-taggable-select
+    :taggable="true"
 	v-model="fruit" 
 	:options="['apple','cherry','banana','pear', 'tomato']"
 ></vue-taggable-select>
@@ -91,9 +92,11 @@ Vue.component('vue-taggable-select', VueTaggableSelect);
 
 ```html
 <vue-taggable-select
-        v-model="fruit"
-        :options="['apple','banana','cherry','tomato']"
-        :required="true"
+    make-it-taggable="good!"
+    :taggable="true"
+    v-model="fruit"
+    :options="['apple','banana','cherry','tomato']"
+    :required="true"
 ></vue-taggable-select>
 ```
 
@@ -145,6 +148,7 @@ You can override some of it. Like so:
         you-like-huge-dropdowns="1000px is long!"
         max-height="1000px"
         :classes='{
+            icons: "icons"
             active: "active",
             wrapper: "multi-select-wrapper",
             searchWrapper: "search-wrapper",
@@ -228,13 +232,19 @@ props: {
     value: {
         required: true
     },
+    taggable: {
+        type: Boolean,
+        required: false,
+        default: () => false
+    },
     // Use classes to override the look and feel
-    // Provide these 7 classes.
+    // Provide these EIGHT classes.
     classes: {
         type: Object,
         required: false,
         default: () => {
             return {
+                icons: 'icons',
                 active: 'active',
                 wrapper: "multi-select-wrapper",
                 searchWrapper: "search-wrapper",
