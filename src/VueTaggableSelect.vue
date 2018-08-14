@@ -16,7 +16,7 @@
         <div class="relative text-left" :class="[classes.searchWrapper]">
             <div class="rounded bordered border-grey hover:border-blue">
                 <ul :class="[isRequired]"
-                    class="items-center flex flex-wrap list-reset pb-1 pr-1 m-0 text-black w-full">
+                    class="overflow-x-scroll items-center flex flex-wrap list-reset pb-1 pr-1 m-0 text-black w-full">
                     <li v-for="(option, idx) in selectedOptions" :key="idx"
                         @click="seedSearchText"
                         class="mt-1 ml-1 mb-0 flex items-center"
@@ -47,7 +47,7 @@
                                :placeholder="placeholder"
                                :required="required"
                                v-model="searchText"
-                       > 
+                        > 
                         <span v-if="taggable" class="cursor-pointer p-1 text-left flex"
                               @click="addOption($refs.search.value.trim())">
                             <svg class="w-4 h-4 fill-current" :class="searchText ? 'opacity-100' : 'opacity-25'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
@@ -787,6 +787,9 @@
  }
  .rounded {
      border-radius: 0.25em;
+ }
+ .overflow-x-scroll {
+     overflow-x: scroll;
  }
  .search-input {
  }

@@ -5,7 +5,7 @@ import VueTaggableSelect from './src/VueTaggableSelect.vue';
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('vue-multi-select', VueTaggableSelect);
+	Vue.component('vue-taggable-select', VueTaggableSelect);
 }
 
 // Create module definition for Vue.use()

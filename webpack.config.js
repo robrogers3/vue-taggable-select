@@ -3,7 +3,8 @@ const merge = require('webpack-merge');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
@@ -47,7 +48,8 @@ var config = {
 		    ]
 		}
 	    ]
-	)
+	),
+        new CleanWebpackPlugin(['dist']),
     ],
     optimization: {
 
