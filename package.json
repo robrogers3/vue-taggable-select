@@ -1,0 +1,62 @@
+{
+    "name": "vue-taggable-select",
+    "version": "1.0.0",
+    "description": "multiple taggable select autocomplete dropdown for vue",
+    "main": "dist/index",
+    "unpkg": "dist/vue-taggable-select.js",
+    "browser": {
+        "./sfc": "dist/vue-taggable-select.vue"
+    },
+    "scripts": {
+        "prepublish": "npm run build",
+        "serve": "vue-cli-service serve",
+        "vbuild": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "dev": "NODE_ENV=development webpack",
+        "build": "NODE_ENV=production webpack --progress --hide-modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/robrogers3/vue-taggable-select.git"
+    },
+    "keywords": [
+        "tagging",
+        "tags",
+        "vue",
+        "js",
+        "dropdown",
+        "autocomplete",
+        "select",
+        "multi",
+        "multiple",
+        "element",
+        "component"
+    ],
+    "author": "Rob Rogers",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/robrogers3/vue-taggable-select/issues"
+    },
+    "homepage": "https://github.com/robrogers3/vue-taggable-select#readme",
+    "peerDependencies": {
+        "vue": "2.x"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-stage-3": "^6.24.1",
+        "copy-webpack-plugin": "^4.5.2",
+        "cross-env": "^5.0.5",
+        "css-loader": "^0.28.7",
+        "file-loader": "^1.1.4",
+        "vue": "^2.5.11",
+        "vue-loader": "14.2.2",
+        "vue-template-compiler": "^2.4.4",
+        "webpack": "^4.16.3",
+        "webpack-cleanup-plugin": "^0.5.1",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^2.9.1",
+        "webpack-merge": "^4.1.3"
+    }
+}
