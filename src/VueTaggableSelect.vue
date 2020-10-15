@@ -111,7 +111,7 @@
          return {
              errors: [],
              mutableOptions: [],
-             selectedOptions: [],
+             selectedOptions: this.value,
              searchText: null,
              dropdownOpen: false
          };
